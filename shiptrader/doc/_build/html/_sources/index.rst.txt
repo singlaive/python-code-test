@@ -13,7 +13,7 @@ Starships
 
 ::
 
-    /shiptrader/ships/ GET
+    GET /shiptrader/ships/
 
 Browse all starships.
 
@@ -63,7 +63,7 @@ Listings
 
 ::
 
-    /shiptrader/listings/ POST
+    POST /shiptrader/listings/
 
 List a starship for sale, the user should supply the Starship name and list price.
 
@@ -84,7 +84,7 @@ price              number  The price of this startship for sale.
 
 Example responses::
 
-    HTTP/1.0 201 OK
+    HTTP/1.0 201 Created
     Content-Type: application/json
     {
         "id": 1
@@ -99,7 +99,7 @@ id                 number  The name of this starship. The common name, such as "
 
 ::
 
-    /shiptrader/listings/ GET
+    GET /shiptrader/listings/
 
 Return all active listings via starship_class. Results can be sorted by price or time of listing.
 
@@ -146,7 +146,7 @@ time_submitted     datetime  The time the listing was created.
 
 ::
 
-    /shiptrader/listings/id/ PATCH
+    PATCH /shiptrader/listings/id/
 
 Update existing listing. The operation at the moment suported is: activate and deactivate. When a list is submited, it is active by default. This API can deactivate it, thus it would be hidden when browsing all listings. The activate operation can make it appear in all listings again.
 
@@ -166,11 +166,7 @@ op          string  Either "deactivate" or "deactivate"
 
 Example responses::
 
-    HTTP/1.0 200 OK
-    Content-Type: application/json
-    {
-        "OK": True
-    }
+    HTTP/1.0 204 No content
 
 
 .. toctree::

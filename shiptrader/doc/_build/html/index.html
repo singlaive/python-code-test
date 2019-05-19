@@ -35,7 +35,7 @@
 <p>Shiptrader provides a group of REST API to help selling starships. It sources some technical information about the Starships on sale from the Starship API.</p>
 <div class="section" id="starships">
 <h2>Starships<a class="headerlink" href="#starships" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">shiptrader</span><span class="o">/</span><span class="n">ships</span><span class="o">/</span> <span class="n">GET</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GET</span> <span class="o">/</span><span class="n">shiptrader</span><span class="o">/</span><span class="n">ships</span><span class="o">/</span>
 </pre></div>
 </div>
 <p>Browse all starships.</p>
@@ -110,7 +110,7 @@
 </div>
 <div class="section" id="listings">
 <h2>Listings<a class="headerlink" href="#listings" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">shiptrader</span><span class="o">/</span><span class="n">listings</span><span class="o">/</span> <span class="n">POST</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">POST</span> <span class="o">/</span><span class="n">shiptrader</span><span class="o">/</span><span class="n">listings</span><span class="o">/</span>
 </pre></div>
 </div>
 <p>List a starship for sale, the user should supply the Starship name and list price.</p>
@@ -146,7 +146,7 @@
 </tbody>
 </table>
 <p>Example responses:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HTTP</span><span class="o">/</span><span class="mf">1.0</span> <span class="mi">201</span> <span class="n">OK</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HTTP</span><span class="o">/</span><span class="mf">1.0</span> <span class="mi">201</span> <span class="n">Created</span>
 <span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
 <span class="p">{</span>
     <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span>
@@ -172,7 +172,7 @@
 </tr>
 </tbody>
 </table>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">shiptrader</span><span class="o">/</span><span class="n">listings</span><span class="o">/</span> <span class="n">GET</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GET</span> <span class="o">/</span><span class="n">shiptrader</span><span class="o">/</span><span class="n">listings</span><span class="o">/</span>
 </pre></div>
 </div>
 <p>Return all active listings via starship_class. Results can be sorted by price or time of listing.</p>
@@ -253,7 +253,7 @@
 </tr>
 </tbody>
 </table>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">shiptrader</span><span class="o">/</span><span class="n">listings</span><span class="o">/</span><span class="nb">id</span><span class="o">/</span> <span class="n">PATCH</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">PATCH</span> <span class="o">/</span><span class="n">shiptrader</span><span class="o">/</span><span class="n">listings</span><span class="o">/</span><span class="nb">id</span><span class="o">/</span>
 </pre></div>
 </div>
 <p>Update existing listing. The operation at the moment suported is: activate and deactivate. When a list is submited, it is active by default. This API can deactivate it, thus it would be hidden when browsing all listings. The activate operation can make it appear in all listings again.</p>
@@ -284,11 +284,7 @@
 </tbody>
 </table>
 <p>Example responses:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HTTP</span><span class="o">/</span><span class="mf">1.0</span> <span class="mi">200</span> <span class="n">OK</span>
-<span class="n">Content</span><span class="o">-</span><span class="n">Type</span><span class="p">:</span> <span class="n">application</span><span class="o">/</span><span class="n">json</span>
-<span class="p">{</span>
-    <span class="s2">&quot;OK&quot;</span><span class="p">:</span> <span class="kc">True</span>
-<span class="p">}</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">HTTP</span><span class="o">/</span><span class="mf">1.0</span> <span class="mi">204</span> <span class="n">No</span> <span class="n">content</span>
 </pre></div>
 </div>
 <div class="toctree-wrapper compound">
