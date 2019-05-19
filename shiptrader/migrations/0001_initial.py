@@ -20,12 +20,15 @@ class Migration(migrations.Migration):
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('name', models.CharField(max_length=255)),
                 ('price', models.IntegerField()),
+                ('time_submitted', models.DateTimeField(auto_now_add=True)),
+                ('active', models.BooleanField()),
             ],
         ),
         migrations.CreateModel(
             name='Starship',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
+                ('name', models.CharField(max_length=255)),
                 ('starship_class', models.CharField(max_length=255)),
                 ('manufacturer', models.CharField(max_length=255)),
                 ('length', models.FloatField()),
